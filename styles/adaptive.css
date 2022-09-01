@@ -1,0 +1,14 @@
+@media screen and (min-width: 3500px) {
+  body {
+    background-image: url("../images/background-main-large.jpg"); } }
+@media screen and (max-width: 1200px) {
+  h1 {
+    left: -50px;
+    top: calc(-2rem + -523px); } }
+@media screen and (max-width: 810px) {
+  #wrapper {
+    margin-left: -53px;
+    margin-right: -53px;
+    width: unset; } }
+
+/*# sourceMappingURL=adaptive.css.map */
