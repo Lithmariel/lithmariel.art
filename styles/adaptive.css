@@ -9,6 +9,17 @@
   #wrapper {
     margin-left: -53px;
     margin-right: -53px;
-    width: unset; } }
+    width: unset; } 
+
+
+   .sheets-list .sheet {
+   	width: 100%;
+   }
+
+   .gallery li img {
+   	width: 100%;
+   	height: unset;
+   }
+}
 
 /*# sourceMappingURL=adaptive.css.map */

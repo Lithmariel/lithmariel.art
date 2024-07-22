@@ -1,6 +1,13 @@
 /* So you like code eh? This is kinda shit, really. But it works. *shrugs* */
 
 /* Main style sheet */
+
+@font-face {
+  font-family: 'MorrisRomanBlack';
+  src: url('fonts/MorrisRomanBlack.ttf') format('truetype'),
+  url('fonts/MorrisRomanBlack.woff') format('woff')/* Safari, Android, iOS */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Are+You+Serious&display=swap');
 
@@ -24,9 +31,9 @@ a img {
 /* Basic styles
 ~~~~~~~~~~~~~~~~~~~~~~~~ */
 body, html {
-	font-size: 30px;
+	font-size: 20px;
 	font-family: "Almendra", serif;
-	font-family: 'Longa Iberica', cursive;
+	font-family: "MorrisRomanBlack", cursive;
 	font-style: oblique 297deg;
 	color: #2affcd;
 	/*text-shadow: -1px -1px 0 #c1fff26b; */
@@ -54,58 +61,13 @@ a {
 
 #wrapper {
 	width: calc(100% - 1rem);
+	margin: 0 auto;
 	max-width: 1200px;
-	margin: 160px auto 0;
-	border-style: solid;
-	position: relative;
-	border-width: 420px 170px 300px 170px;
-	border-image: url("../images/gates-frame.png") 52.4% 38.3% 29% 37% round round; }
-	#wrapper:before, #wrapper:after {
-		display: block;
-		content: "";
-		width: 320px;
-		height: 350px;
-		position: absolute;
-		right: 50px;
-		top: -567px;
-		pointer-events: none;
-		background-size: 100%;
-		background-repeat: no-repeat; }
-	#wrapper:before {
-		background-image: url("../images/dragon-back.png");
-		z-index: -1; }
-	#wrapper:after {
-		background-image: url("../images/dragon-front.png");
-		z-index: 11; }
+}
 
 #content {
-	margin: -290px -100px -100px;
 	min-height: 700px;
 	padding: 1rem 0; }
-	#content > * {
-		position: relative;
-		z-index: 10; }
-	#content:before {
-		content: "";
-		display: inline-block;
-		position: absolute;
-		left: -100px;
-		right: -100px;
-		bottom: -200px;
-		z-index: -1;
-		top: -350px;
-		background: linear-gradient(rgba(210,51,51,15), transparent);
-		/*background: url("../images/forest.png") bottom right/55% no-repeat, url("../images/beach.png") bottom left/55% no-repeat, url("../images/underworld.png") bottom left/55% no-repeat, url("../images/desert.png") bottom right/55% no-repeat, linear-gradient(transparent, rgba(47, 196, 227, 0.67)); */
-	}
-	#content:after {
-		/*content: "";*/
-		display: inline-block;
-		background: url("../images/gate-base-grass-details.png") no-repeat center top/auto 100%, url("../images/gate-base-grass.png") no-repeat center 65%/100%;
-		position: absolute;
-		right: -185px;
-		left: -185px;
-		bottom: -464px;
-		padding-top: 50%; }
 
 p + p {
 	margin-top: 1em; }
@@ -116,11 +78,7 @@ h1 {
 	/*filter: drop-shadow(0px 1px 1px #48141b);*/
 	font-weight: normal;
 	color: #93bdff;
-	position: absolute;
-	top: calc(-2rem + -451px);
-	left: 50px;
 	text-align: center;
-	right: 50px;
 	color: transparent;
 	background: url("../images/logo.png") no-repeat center / 100% auto;
 	margin: 0 auto;
@@ -259,9 +217,10 @@ menu {
 	.sheets-list .sheet {
 		flex-grow: 1;
 		flex-shrink: 1;
-		max-width: 400px;
+		max-width: 600px;
 		min-width: 200px;
-		width: 23%; }
+		position: relative;
+		width: 45%; }
 	.sheets-list img {
 		max-height: 250px;
 		margin-bottom: 1em;
@@ -278,12 +237,17 @@ menu {
 	margin: 0.5em;
 	padding: 0.5em 1em;
 	border-style: solid;
-	border-width: 130px 130px 130px 130px;
+	border-width: 110px;
 	color: #acfff7;
 	border-image: url("../images/frame-1.png") 49.2% 49.2% 49.2% 49.2% fill stretch stretch; }
 	.sheet h3, .sheet h4 {
 		text-align: center;
 		color: #8ddfc9;
+		position: absolute;
+		left: 5px;
+		right: 5px;
+		background: rgba(0,0,0,0.3);
+		padding: 0.2em 10px 0.3em;
 		text-shadow: 1px 0 0 rgba(32, 46, 52, 0.7), -1px 0 0 rgba(32, 46, 52, 0.7), 0 1px 0 rgba(32, 46, 52, 0.7), 0 -1px 0 rgba(32, 46, 52, 0.7);
 		transition: 0.1s all; }
 	.sheet h3 {
@@ -428,7 +392,7 @@ menu {
 }
 
 .gallery li.big img {
-	max-width: unset;
+	max-width: 100%;
 	height: unset;
 }
 
@@ -442,10 +406,6 @@ menu {
 	 }*/
 
 footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
 	margin: 1em auto;
 	text-align: center; }
 	footer a {
